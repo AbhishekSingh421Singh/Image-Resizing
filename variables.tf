@@ -1,5 +1,5 @@
-variable "source_bucket_name" { default = "source-bucket-image-lavanya" }
-variable "dest_bucket_name"   { default = "dest-bucket-image-lavanya" }
+variable "source_bucket_name" { default = "source-bucket-image-abhishek" }
+variable "dest_bucket_name"   { default = "dest-bucket-image-abhishek" }
 variable "sns_topic_name"     { default = "image-topic" }
 variable "lambda_function_name" { default = "lambda-image" }
 variable "resize_width" { default = 600 }
@@ -13,7 +13,7 @@ variable "tags" {
   }
 }
 variable "email" { 
-  default = "elavanya@hcltech.com"
+  default = "singh.abhishekkumar@hcltech.com"
 }
 variable "lambda_role" { 
   default = "lambda_role_s3_image"
