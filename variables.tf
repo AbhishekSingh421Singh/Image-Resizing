@@ -1,37 +1,20 @@
- # Input variables
-
-variable "region" {
-  description = "AWS region"
-  type        = string
-  default     = "us-east-1"
+variable "source_bucket_name" { default = "source-bucket-image-lavanya" }
+variable "dest_bucket_name"   { default = "dest-bucket-image-lavanya" }
+variable "sns_topic_name"     { default = "image-topic" }
+variable "lambda_function_name" { default = "lambda-image" }
+variable "resize_width" { default = 600 }
+ 
+variable "tags" {
+  type = map(string)
+  default = {
+    Project   = "ImageProcessor"
+    Owner     = "prodTeam"
+    ManagedBy = "Terraform"
+  }
 }
-
-variable "source_bucket_name" {
-  description = "Name of the source S3 bucket"
-  type        = string
+variable "email" { 
+  default = "elavanya@hcltech.com"
 }
-
-variable "destination_bucket_name" {
-  description = "Name of the destination S3 bucket"
-  type        = string
-}
-
-variable "lambda_code_bucket_name" {
-  description = "Name of the S3 bucket for Lambda code"
-  type        = string
-}
-
-variable "sns_topic_name" {
-  description = "Name of the SNS topic"
-  type        = string
-}
-
-variable "lambda_function_name" {
-  description = "Name of the Lambda function"
-  type        = string
-}
-
-variable "lambda_role_name" {
-  description = "Name of the IAM role for Lambda"
-  type        = string
+variable "lambda_role" { 
+  default = "lambda_role_s3_image"
 }

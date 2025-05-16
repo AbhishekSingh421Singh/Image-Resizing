@@ -1,4 +1,5 @@
-variable "sns_topic_name" {
-  description = "Name of the SNS topic"
-  type        = string
+variable "topic_name" {}
+variable "tags" {
+    type = map(string)
 }
+variable "email" {}
