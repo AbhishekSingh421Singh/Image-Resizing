@@ -2,7 +2,7 @@
 name: Automated Image Resizing and Transfer System Using AWS Services.
 
 on:
-  pull_request:
+  push:
 
   
 permissions:
