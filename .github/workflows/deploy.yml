@@ -1,5 +1,5 @@
 # GitHub Actions workflow
-name: Automated Image Resizing and Transfer System Using AWS
+name: Automated Image Resizing and Transfer System Using AWS Services.
 
 on:
   push:
